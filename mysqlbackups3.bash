@@ -28,7 +28,7 @@ s3cmd ls s3://$S3_BUCKET/automysqlbackup/daily/ -r | while read -r line;
         if [[ $fileName != "" ]]
           then
             echo "Removing $fileName"
-            #s3cmd del "$fileName"
+            s3cmd del "$fileName"
         fi
     fi
   done;
